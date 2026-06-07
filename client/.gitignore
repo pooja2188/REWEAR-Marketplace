@@ -28,3 +28,27 @@ dist-ssr
 .env.local
 .env.production
 .env.development
+
+
+# Block both frontend and backend dependencies cleanly
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Block dependencies inside client and server folders
+client/node_modules/
+server/node_modules/
+node_modules/
+
+# Block compiled production build bundles
+client/dist/
+client/build/
+.vite/
+
+# Block all environmental secret files anywhere in the project
+.env
+.env.local
+.env.development
+.env.production
+server/.env
+client/.env
